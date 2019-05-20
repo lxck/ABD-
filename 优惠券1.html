@@ -1,0 +1,99 @@
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>我的优惠券</title><link rel="stylesheet" href="css/mui.min.css" /><style>
+        .mui-card .mui-control-content
+        {
+            padding: 10px;
+        }
+        
+        .mui-control-content
+        {
+            height: 150px;
+        }
+        .mui-segmented-control-inverted .mui-control-item.mui-active
+        {
+            color: #FF7612 !important;
+            border-bottom: 2px solid #FF7612 !important;
+            background: 0 0;
+        }
+        input, button, .mui-btn
+        {
+            margin-left: 5px;
+        }
+        .coupon_name
+        {
+            width: 122px;
+            height: 100px;
+            background: #48CBC5;
+            text-align: center;
+            color: #ffffff;
+            vertical-align: middle;
+            font-size: 14px;
+            margin: 0 10px 0 0;
+        }
+        .coupon_name b
+        {
+            font-size: 3rem;
+            position: relative;
+            top: 20px;
+        }
+        
+        .coupon_used
+        {
+            display: inline-block;
+            border: 1px solid #48CBC5;
+            border-radius: 10px;
+            color: #48CBC5;
+            font-size: 14px;
+            text-align: center;
+            padding: 2px 6px;
+            float: right;
+        }
+        .mui-card
+        {
+            box-shadow: 0 0px 0px rgba(0,0,0,.3);
+        }
+        .mui-badge
+        {
+            font-size: 12px;
+            line-height: 1;
+            display: inline-block;
+            padding: 3px 6px;
+            color: #fff;
+            border-radius: 100px;
+            background-color: #FF0000;
+        }
+        .mui-badge
+        {
+            position: relative;
+            right: -15px;
+        }
+    </style></head><body><header class="mui-bar mui-bar-nav"><h1 class="mui-title"><img src="images/logo.png" width="106" /></h1></header><header class="mui-bar mui-bar-nav" style="height: 45px; margin: 44px 0 0 0"><a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a><h1 class="mui-title">我的优惠券</h1></header><br /><br /><br /><div class="mui-content"><div style="padding: 10px 10px;"><div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted"><a class="mui-control-item mui-active" href="#item1">未使用（2）</a><a class="mui-control-item" href="#item2">使用记录（0）</a><a class="mui-control-item" href="#item3">已过期（0）</a></div></div><div><div id="item1" class="mui-control-content mui-active"><div id="scroll" class=""><div class="mui-scroll"><ul class="mui-table-view" id="UserCoupon1View">
+    
+    <li class="mui-table-view-cell mui-media">
+   <div class="mui-pull-left coupon_name"> <img src="images/yhq5.png" width="122"></div>
+<div class="mui-media-body"><a href="" style="color: #000">阿蚌丁新注册会员专享红包</a><div style="margin: 20px 0 0 0"><p class="mui-ellipsis" style="float: left;">
+                                            2018.07.23-2019.07.23</p><a class="coupon_used" href="javascript:;" onclick="confirmcoupon(1);">
+                                            立即使用</a></div><div style="clear: both;"></div><div class="mui-card"><ul class="mui-table-view mui-table-view-chevron"><li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">
+                                                详细信息</a><ul class="mui-table-view mui-table-view-chevron"><p>
+                                                        阿蚌丁新注册会员专享红包,每个帐户仅限领取一次</p></ul></li></ul></div></div></li><li class="mui-table-view-cell mui-media"><div class="mui-pull-left coupon_name"><img src="images/yhq500.png" width="122"></div><div class="mui-media-body"><a href="" style="color: #000">阿蚌丁新注册会员专享红包</a><div style="margin: 20px 0 0 0"><p class="mui-ellipsis" style="float: left;">
+                                            2018.07.23-2019.07.23</p><a class="coupon_used" href="javascript:;" onclick="confirmcoupon(2);">
+                                            立即使用</a></div><div style="clear: both;"></div><div class="mui-card"><ul class="mui-table-view mui-table-view-chevron"><li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">
+                                                详细信息</a><ul class="mui-table-view mui-table-view-chevron"><p>
+                                                        阿蚌丁新注册会员专享红包,每个帐户仅限领取一次</p></ul></li></ul></div></div></li></ul></div></div></div><div id="item2" class="mui-control-content"></div><div id="item3" class="mui-control-content"></div></div></div><footer class="bottom-btn-bar weui_tabbar"><a href="/home/welcome" class="weui_tabbar_item"><div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a><a href="/home/orderlist" class="weui_tabbar_item"><div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a><a href="/home/goodshopcart" class="weui_tabbar_item"><div class="weui_tabbar_icon order_shopcart"><span class="mui-badge">2</span></div><p class="weui_tabbar_label">购物车</p></a><a href="/me/usercenter" class="weui_tabbar_item weui_bar_item_on"><div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a></footer><script type="text/javascript" src="js/mui.min.js"></script><script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="js/jquery.ext.js"></script><script type="text/javascript">
+        confirmcoupon = function (e) {
+            var OrderCode = "-1";
+            if (OrderCode == "-1") {
+            }
+            else {
+                var d = { OrderCode: OrderCode, CExpressID: e };
+                var url = "/api/me/address/confirmcoupon";
+                myAjax(d, url, function (r) {
+                    if (!r.IsSuccess) {
+                    }
+                    else {
+                        window.location.href = "/home/goodpay/" + r.Data + "/1";
+                    }
+                });
+            }
+        }
+    </script></body></html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>结算页</title><link rel="stylesheet" type="text/css" href="/css/mui.min.css" /><link rel="stylesheet" type="text/css" href="/css/app.css" /><style>
+		    .mui-table h4{
+		        line-height: 21px;
+		        font-weight: 500;
+		    }
+		
+		    .mui-table .oa-icon{
+		        position: absolute;
+		        right:0;
+		        bottom: 0;
+		    }
+		    .mui-table .oa-icon-star-filled{
+		        color:#f14e41;
+		    }
+			.blackbackground{background:rgba(0,0,0,0.3)!important;color:#f7f7f7;font-size:14px;}
+			.bulewen{width:15px;height:3px;display:inline-block;float:left;background:#57A8FC;margin:0 6px; -webkit-transform: skew(-60deg);   -moz-transform: skew(-60deg);   -o-transform: skew(-60deg);  -ms-transform: skew(-60deg); transform: skew(-60deg); }
+			.redwen{width:15px;height:3px;display:inline-block;float:left;background:#FF0000;margin:0 6px;-webkit-transform: skew(-60deg);   -moz-transform: skew(-60deg);   -o-transform: skew(-60deg);  -ms-transform: skew(-60deg); transform: skew(-60deg);}
+		</style></head><body><header class="mui-bar mui-bar-nav"><h1 class="mui-title"><img src="/images/logo.png" width="106" /></h1></header><header id="header" class="mui-bar mui-bar-nav" style="height:45px;margin:44px 0 0 0"><a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a><h1 class="mui-title">填写订单</h1></header><br /><br /><div class="mui-content"><ul class="mui-table-view"><li class="mui-table-view-cell mui-media"><a href="/me/useraddress" class="mui-navigate-right"><div class="mui-media-body">
+							高拉特 <b>134****4587</b><p class="mui-ellipsis-2">广西南宁市青秀区民族大道145号金融大厦B座10楼1001国贸中心C座1290</p></div></a></li><div style="width:100%;overflow:hidden;height:3px;"><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><li class="bulewen"></li><li class="redwen"></li><div style="clear:both"></div></div><li class="mui-table-view-cell mui-media"><a class="mui-navigate-right"><div class="mui-media-body"><span style="font-size:14px;color:#999">支付方式</span><p class="mui-ellipsis" style="font-size:18px;color:#333;font-weight:bold;">在线支付</p></div></a></li><li class="mui-table-view-cell mui-media"><img class="mui-media-object mui-pull-left" src="/images/cbd.jpg" /><div class="mui-media-body"><a href="" style="color:#000">阿蚌丁中蚝新鲜 北海生蚝牡蛎翡翠净化蚝海蛎子可生食5斤装</a><p class="price2">￥328</p><p class="mui-ellipsis">中蚝5斤  14只一件</p></div><div class="mui-input-row"><label>购买数量</label><div class="mui-numbox" data-numbox-min="1"><button class="mui-btn mui-btn-numbox-minus" type="button">-</button><input class="mui-input-numbox" type="number" /><button class="mui-btn mui-btn-numbox-plus" type="button">+</button></div></div></li><li class="mui-table-view-cell mui-media"><a class="mui-navigate-right"><div class="mui-media-body"><span style="font-size:14px;color:#999">配送</span><p class="mui-ellipsis" style="font-size:18px;color:#333;font-weight:bold;">京东快递</p></div></a></li></ul><br /><ul class="mui-table-view"><li class="mui-table-view-cell mui-media"><a class="mui-navigate-right"><div class="mui-media-body"><span style="font-size:14px;color:#999">发票</span><p class="mui-ellipsis" style="font-size:18px;color:#333;font-weight:bold;">电子（商品明细-个人）</p></div></a></li><li class="mui-table-view-cell mui-media"><a class="mui-navigate-right"><div class="mui-media-body"><span style="font-size:14px;color:#999">优惠券</span><p class="mui-ellipsis" style="font-size:18px;color:#333;font-weight:bold;">优惠6.00元</p></div></a></li><li class="mui-table-view-cell mui-media"><a class="mui-navigate-right"><div class="mui-media-body"><span style="font-size:14px;color:#999">礼品卡</span><p class="mui-ellipsis" style="font-size:18px;color:#333;font-weight:bold;">无可用礼品卡</p></div></a></li></ul><br /><ul class="mui-table-view"><li class="mui-table-view-cell word-size">商品金额<span class="mui-badge" style="font-size:16px;font-weight:bold;background:#ffffff">￥328.0</span></li><li class="mui-table-view-cell word-size">运费（总重14.5kg）<span class="mui-badge mui-badge-danger" style="font-size:16px;font-weight:bold;color:#F2492A;background:#ffffff">+￥10.0</span></li><li class="mui-table-view-cell word-size">运费优惠<span class="mui-badge mui-badge-danger" style="font-size:16px;font-weight:bold;color:#F2492A;background:#ffffff">-￥10.0</span></li></ul><br /><div style="width:96%;background:#FBF7D8;color:#FEC571;padding:10px 2%;font-size:14px;margin:0 auto;">广西南宁市青秀区民族大道145号金融大厦B座10楼1001国贸中心C座1290</div><br /><br /><br /></div><nav class="mui-bar mui-bar-tab"><a class="mui-tab-item mui-active account-left" href="#tabbar"><b style="color:#000">合计：</b><span class="mui-tab-label" style="font-size:25px;font-weight:bold;color:#FF0000">￥328.0</span></a><a class="account" href="/home/orderlist"><span class="addcart-label" style="-webkit-animation:btnlight 1s infinite;animation:btnlight 1s infinite;">提交订单</span></a></nav><script src="/js/mui.min.js"></script><script>
+				    mui.init();
+
+				    mui.plusReady(function () {
+				        //				var view = plus.nativeObj.View.getViewById("title");
+				        //				
+				        //				var bitmap = new plus.nativeObj.Bitmap("back");
+				        //				bitmap.loadBase64Data("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8AAACubimgAAAAI3RSTlMAGfUTGfQTGPMSGPIYGhgaGBsXGxcbFxwXHBccFhwWHRYdHWufDPQAAAABYktHRACIBR1IAAAAB3RJTUUH4QETEBwooeTlkQAAAJVJREFUSMft1EkSgkAQRNFGUXFWHBDBibr/HTUwD5B/48Ig1y+io7u6MqUhf5hsNEY+j5hMgZ/FJ8Xc9ovos3T96utjbfqN/Nb0O/m96Uv5g+mP8ifTn+Ur01/ka9Nf5RvTt/I309/lH6Z/yr9Mn+Q71/MT8B34K/E58Enzv8R/K98HvnF8p3lr8F7izce7lbf3kJ/lDQp9HdBhgg3PAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAxLTE5VDE2OjI4OjQwKzA4OjAwpTDFwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMS0xOVQxNjoyODo0MCswODowMNRtfX0AAAAASUVORK5CYII=");
+				        //				view.drawBitmap(bitmap, {}, {
+				        //					top: "10px",
+				        //					left: "10px",
+				        //					width: "24px",
+				        //					height: "24px"
+				        //				});
+				        //				
+				        //				view.setTouchEventRect({top:"0px",left:"0px",width:"44px",height:"100%"});
+				    });
+
+				    mui('.mui-scroll-wrapper').scroll();
+				    mui('body').on('shown', '.mui-popover', function (e) {
+				        //console.log('shown', e.detail.id);//detail为当前popover元素
+				    });
+				    mui('body').on('hidden', '.mui-popover', function (e) {
+				        //console.log('hidden', e.detail.id);//detail为当前popover元素
+				    });
+		</script></body></html>

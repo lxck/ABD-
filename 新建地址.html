@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>地址详情</title>
+  <script type="text/javascript" src="js/area.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="css/mui.min.css" />
+  <style>
+		h5 {
+				margin: 0 14px;padding:10px 0 0 0;font-size:14px;color:#333;font-weight:bold;
+			}
+			label{font-size:14px;color:#666}input{font-size:14px;}
+			.mui-table-view li{border:0!important}
+				.mui-table-view-cell{border:0!important}
+				.mui-input-row{height:auto!important}
+				.mui-input-row select{font-size:14px!important;}
+        </style>
+ </head>
+ <body>
+  <header class="mui-bar mui-bar-nav">
+   <h1 class="mui-title"><img src="images/logo.png" width="106" /></h1>
+  </header>
+  <header class="mui-bar mui-bar-nav" style="height:45px;margin:44px 0 0 0">
+   <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+   <h1 class="mui-title">地址详情</h1>
+  </header>
+  <br />
+  <br />
+  <br />
+  <div class="mui-content">
+   <form class="mui-input-group">
+    <div class="mui-input-row">
+     <label>收货人：</label>
+     <input type="text" class="mui-input-clear" placeholder="收货人" />
+    </div>
+    <div class="mui-input-row">
+     <label>联系方式：</label>
+     <input type="text" class="mui-input-clear" placeholder="联系方式" />
+    </div>
+    <div class="mui-input-row">
+     <label>所在省份：</label>
+     <input type="hidden" id="hid_province" value="" runat="server" />
+     <input type="hidden" id="hid_city" value="" runat="server" />
+     <input type="hidden" id="hid_county" value="" runat="server" />
+     <select id="s_province" name="s_province" runat="server"></select>
+     </div>
+      <div class="mui-input-row">
+     <label>所在城市：</label> <select id="s_city" name="s_city" runat="server"></select></div>
+    <div class="mui-input-row"> 
+    <label>所在区域：</label>  <select id="s_county" name="s_county" runat="server"></select></div>
+     
+     <script type="text/javascript">
+                    var province = $("#hid_province").val();
+                    var city = $("#hid_city").val();
+                    var county = $("#hid_county").val();
+                    $(function () {
+                        setup();
+                        preselect(province, city, county);
+                    });
+                </script>
+   
+    <div class="mui-input-row">
+     <label>详细地址：</label>
+     <input type="text" class="mui-input-clear" placeholder="街道、楼牌号等" />
+    </div>
+    <ul class="mui-table-view">
+     <h5>设为默认地址</h5>
+     <li class="mui-table-view-cell"><span style="font-size:14px;color:#5E5D5D"></span>
+      <div class="mui-switch mui-switch-blue mui-switch-mini">
+       <div class="mui-switch-handle"></div>
+      </div></li>
+    </ul>
+    <a class="mui-btn mui-btn-danger mui-btn-block" style="background:#F40301;border-radius:30px;margin:20px auto;width:80%;">保存并使用</a>
+   </form>
+  </div>
+  <footer class="bottom-btn-bar weui_tabbar">
+   <a href="/home/welcome" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a>
+   <a href="/home/orderlist" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a>
+   <a href="/home/goodshopcart" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_shopcart"></div><p class="weui_tabbar_label">购物车</p></a>
+   <a href="/me/usercenter" class="weui_tabbar_item weui_bar_item_on">
+    <div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a>
+  </footer>
+  <script src="js/mui.min.js"></script>
+  <script>
+	    mui.init({
+	        swipeBack: true //启用右滑关闭功能
+	    });
+	    mui('.mui-content .mui-switch').each(function () { //循环所有toggle
+	        //toggle.classList.contains('mui-active') 可识别该toggle的开关状态
+	        this.parentNode.querySelector('span').innerText = '注：每次下单时会使用该地址 ' + (this.classList.contains('mui-active') ? '' : '');
+	        /**
+	        * toggle 事件监听
+	        */
+	        this.addEventListener('toggle', function (event) {
+	            //event.detail.isActive 可直接获取当前状态
+	            this.parentNode.querySelector('span').innerText = '注：每次下单时会使用该地址 ' + (event.detail.isActive ? '' : '');
+	        });
+	    });
+		</script>
+ </body>
+</html>

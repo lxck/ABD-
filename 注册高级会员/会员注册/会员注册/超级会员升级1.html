@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>超级会员升级</title>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <link rel="stylesheet" href="css/weui.min.css" />
+  <link rel="stylesheet" href="css/jquery-weui.min.css" />
+  <link rel="stylesheet" href="css/basic.css" />
+  <link rel="stylesheet" href="css/js_apply_sign.css" />
+  <style type="text/css">
+       .mui-toast-container{line-height:17px;position:fixed;z-index:9999;bottom:50%/*50px*/;left:50%;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-transform:translate(-50%,0);transform:translate(-50%,0);opacity:0}.mui-toast-container.mui-active{opacity:.9}.mui-toast-message{font-size:14px;padding:10px 25px;text-align:center;color:#fff;border-radius:6px;background-color:#323232}
+	    .baoming
+        {
+            position: relative;
+            color: rgba(255,255,255,1);
+            text-decoration: none;
+            background-color: rgba(219,87,5,1);
+            font-weight: 700;
+            font-size: 30px;
+            display: block;
+            padding: 4px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+            -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+            box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+            margin: 20px auto;
+            width: 80%;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+        }
+    </style>
+ </head>
+ <body>
+  <div class="img">
+   <img src="images/vipregister01.jpg" alt="" />
+  </div>
+  <div class="img" id="btnApply" style="z-index: 100; position: absolute; top: 288px;
+        width: 100%;"></div>
+  <div class="weui_cells weui_cells_form" style="margin: 0px 10%;">
+   <div class="weui_cell">
+    <div class="weui_cell_hd">
+     <label class="weui_label"> 手机号码</label>
+    </div>
+    <div class="weui_cell_bd weui_cell_primary">
+     <input name="signphone" type="text" id="signphone" class="weui_input" placeholder="请输入手机号码" maxlength="11" />
+    </div>
+    <div class="weui_cell_ft">
+     <i class="weui_icon_warn"></i>
+    </div>
+   </div>
+   <div class="weui_cell" style="float: left; width: 30%">
+    <div class="weui_cell_bd weui_cell_primary">
+     <button type="button" class="weui_input" id="btnsend" onclick="Send();"> 获取验证码</button>
+    </div>
+    <div class="weui_cell_ft">
+     <i class="weui_icon_warn"></i>
+    </div>
+   </div>
+   <div class="weui_cell" style="float: right; width: 40%">
+    <div class="weui_cell_bd weui_cell_primary">
+     <input name="signverifycode" type="text" id="signverifycode" class="weui_input" placeholder="请输入验证码" maxlength="6" style="text-align: center;" />
+    </div>
+    <div class="weui_cell_ft">
+     <i class="weui_icon_warn"></i>
+    </div>
+   </div>
+   <div style="clear: both;"></div>
+   <div class="weui_cell select">
+    <div class="weui_cell_hd">
+     <label class="weui_label"> 性别</label>
+    </div>
+    <div class="weui-row">
+     <div class="weui-col-50 single_item" data-val="男">
+       男
+     </div>
+     <div class="weui-col-50 single_item" data-val="女">
+       女
+     </div>
+     <input type="hidden" name="signsex" />
+    </div>
+   </div>
+   <div class="weui_cell">
+    <div class="weui_cell_hd">
+     <label class="weui_label"> 生日</label>
+    </div>
+    <div class="weui_cell_bd weui_cell_primary">
+     <input name="signbirthday" type="text" id="signbirthday" class="weui_input" placeholder="请输入生日(xxxx-xx-xx)" maxlength="10" />
+    </div>
+    <div class="weui_cell_ft">
+     <i class="weui_icon_warn"></i>
+    </div>
+   </div>
+   <div class="weui_cell">
+    <div class="weui_cell_hd">
+     <label class="weui_label"> 推荐人</label>
+    </div>
+    <div class="weui_cell_bd weui_cell_primary">
+     <input name="signrecommender" type="text" id="signrecommender" class="weui_input" placeholder="请输入推荐人" maxlength="20" />
+    </div>
+   </div>
+  </div>
+  <div class="img">
+   <a href="javascript:;" onclick="addvipregister();" class="baoming"  id='toastBtn'>点击升级超级会员</a>
+  </div>
+  <div class="shareGuide" style="display: none"></div>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/mui.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.ext.js"></script>
+  <script type="text/javascript">
+    $(function () {
+        //        $("#btnApply").css("top", $(window).width() * 0.86);
+
+        $("body").children().on("click", ".single_item", function () {
+            var $this = $(this);
+            $this.siblings(".single_item").removeClass("on");
+            $this.addClass("on");
+            $this.siblings("input").val($this.data("val"));
+        })
+
+        //        $("body").children().on("click", ".multipart_item", function () {
+        //            var $this = $(this);
+        //            $this.toggleClass("on");
+        //            var speciality = "";
+        //            $this.parent().find(".multipart_item.on").each(function () {
+        //                speciality += $(this).html() + "|";
+        //            });
+        //            speciality = speciality.substring(0, speciality.lastIndexOf("|"));
+        //            $this.siblings("input").val(speciality);
+        //        })
+    })
+</script>
+  <script language="javascript" type="text/javascript">
+    Send = function () {
+        var numbers = /^1\d{10}$/;
+        var phone = $('#signphone').val(); //获取输入手机号码
+        if ($('#btnsend').hasClass('weui-icon-clear')) {
+            return false;
+        }
+        if (!numbers.test(phone)) {
+            return false;
+        }
+
+        var time = 60;
+        SendVerifyCode(phone);
+        function timeCountDown() {
+            if (time == 0) {
+                clearInterval(timer);
+                $('#btnsend').removeClass('weui-icon-clear').html("获取验证码");
+                return true;
+            }
+            $('#btnsend').html("已发送(" + time + ")");
+            time--;
+            return false;
+            sends.checked = 0;
+        }
+        $('#btnsend').addClass('weui-icon-clear');
+        timeCountDown();
+        var timer = setInterval(timeCountDown, 1000);
+    }
+    SendVerifyCode = function (phone) {
+        var data = "{'phone':'" + phone + "'}";
+        var url = "/api/me/vip/sendverifycode";
+        myAjax(data, url, function (r) {
+            if (!r.IsSuccess) {
+                mui.toast(r.Message);
+            }
+            else {
+            }
+        });
+    };
+</script>
+  <script type="text/javascript">
+    addvipregister = function () {
+        var d = { Phone: $("#signphone").val(), VerifyCode: $("#signverifycode").val(), Sex: $("input[name='signsex']").val(), BirthDay: $("#signbirthday").val(), Recommender: $("#signrecommender").val() };
+        var url = "/api/me/vip/addvipregister";
+        myAjax(d, url, function (r) {
+            if (!r.IsSuccess) {
+                mui.toast(r.Message);
+            }
+            else {
+                window.location.href = "/me/usercenter";
+            }
+        });
+    }
+</script>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			document.getElementById("toastBtn").addEventListener('tap', function() {
+				mui.toast('出错了，重来');
+			});
+		</script>
+
+ </body>
+</html>

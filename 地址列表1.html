@@ -1,0 +1,91 @@
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>我的地址</title><link rel="stylesheet" href="css/mui.min.css" /><style>
+        .mui-table-view .mui-media-object
+        {
+            line-height: 20px;
+            max-width: 20px;
+            height: 20px;
+        }
+        mark
+        {
+            border: 1px solid #CC9B01;
+            padding: 0 2px;
+            margin: 0 3px 0 0;
+        }
+        .triangle-topleft
+        {
+            position: absolute;
+            right: 45px;
+            top: 12px;
+            color: #000;
+            font-size: 12px;
+           z-index:999;
+            width: 25px;
+           height:30px;
+            background: url(images/addresslogo.jpg) no-repeat center;
+            background-size: 25px;
+        }
+        .triangle-topleft span
+        {
+            position: relative;
+            top: 5px;
+            left: 0;
+            color: #000;
+            font-size: 12px;
+            width: 20px;
+        }
+		
+		.two-a-box{padding:15px 15px 0 15px;border-bottom:1px solid #E4E3E6}
+		.a-box-one{display:block;float:right;}
+		.two-a-box a{color:#000}
+		.a-box-one img{width:20px}
+		.mui-badge{font-size:12px;line-height:1;display:inline-block;padding:3px 6px;color:#fff;border-radius:100px;background-color:#FF0000}
+.mui-badge{position:relative;right:-15px;}
+    </style></head>
+    <body>
+    <header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title"><img src="images/logo.png" width="106" /></h1>
+    </header>
+    <header class="mui-bar mui-bar-nav" style="height: 45px; margin: 44px 0 0 0">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a><h1 class="mui-title">我的地址</h1></header><br /><br />
+    
+    <div class="mui-content">
+    <ul class="mui-table-view" id="CustomerExpressView">
+   
+    <li class="two-a-box">
+    <a href="/me/newaddress/WMDD20180719104420/10/2" class="a-box-one"><img src="images/addedit.png" /></a>
+    <a href="javascript:;" onclick="confirmaddress(10);"><div>
+                     DD1121212 <b>13400000000000111</b>
+      <p class="mui-ellipsis">上海市市辖区徐汇区XXXXX楼</p>  </div> </a>  
+                        <div class="triangle-topleft" style="display:block"></div>
+                   
+    </li>
+                        
+         <li class="two-a-box">
+    <a href="/me/newaddress/WMDD20180719104420/10/2" class="a-box-one"><img src="images/addedit.png" /></a>
+    <a href="javascript:;" onclick="confirmaddress(10);"><div>
+                     DD1121212 <b>13400000000000111</b>
+      <p class="mui-ellipsis">上海市市辖区徐汇区XXXXX楼</p>  </div> </a>  
+                        <div class="triangle-topleft" style="display:none"></div>
+                   
+    </li>                
+      </ul>
+                 <a href="/me/newaddress/0/1" class="mui-btn mui-btn-danger mui-btn-block" style="background: #F40301;&#xD;&#xA;            border-radius: 30px; margin: 20px auto; width: 80%;">新建收货地址</a></div><footer class="bottom-btn-bar weui_tabbar"><a href="/home/welcome" class="weui_tabbar_item"><div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a><a href="/home/orderlist" class="weui_tabbar_item"><div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a><a href="/home/goodshopcart" class="weui_tabbar_item"><div class="weui_tabbar_icon order_shopcart"><span class="mui-badge">0</span></div><p class="weui_tabbar_label">购物车</p></a><a href="/me/usercenter" class="weui_tabbar_item weui_bar_item_on"><div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a></footer><script type="text/javascript" src="js/mui.min.js"></script><script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="js/jquery.ext.js"></script><script type="text/javascript">
+        confirmaddress = function (e) {
+            var OrderCode = "WMDD20180719104420";
+            if (OrderCode == "-1") {
+                window.location.href = "/me/newaddress/" + OrderCode + "/" + e + "/2";
+            }
+            else {
+                var d = { OrderCode: OrderCode, CExpressID: e };
+                var url = "/api/me/address/confirmaddress";
+                myAjax(d, url, function (r) {
+                    if (!r.IsSuccess) {
+                    }
+                    else {
+                        window.location.href = "/home/goodpay/" + r.Data + "/1";
+                    }
+                });
+            }
+        }
+    </script></body></html>

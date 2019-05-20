@@ -1,0 +1,194 @@
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>商品详情页</title><link rel="stylesheet" type="text/css" href="/css/mui.min.css" /><link rel="stylesheet" type="text/css" href="/css/icons-extra.css" /><link rel="stylesheet" type="text/css" href="/css/app.css" /><style>
+        #topPopover
+        {
+            position: absolute;
+            top: 16px;
+            right: 6px;
+        }
+        #topPopover .mui-popover-arrow
+        {
+            left: auto;
+            right: 6px;
+        }
+        
+        .mui-popover
+        {
+            height: 270px;
+        }
+        .mui-table h4, .mui-table h5, .mui-table .mui-h5, .mui-table .mui-h6, .mui-table p
+        {
+            margin-top: 0;
+        }
+        .mui-table h4
+        {
+            line-height: 21px;
+            font-weight: 500;
+        }
+        
+        .mui-table .oa-icon
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .mui-table .oa-icon-star-filled
+        {
+            color: #f14e41;
+        }
+        .blackbackground
+        {
+            background: rgba(0,0,0,0.3) !important;
+            color: #f7f7f7;
+            font-size: 14px;
+        }
+        .mui-icon-left-nav:before
+        {
+            content: url(/images/left.png) !important;
+        }
+        
+        .spec_select
+        {
+            width: 100%;
+            font-size: 14px;
+            border-top: 1px solid #E4E3E6;
+        }
+        .spec_select span
+        {
+            margin: 15px 0 0 -24px;
+        }
+        .spec_select ul
+        {
+            list-style: none;
+            display: inline-flex;
+        }
+        .spec_select ul li
+        {
+            padding: 5px 0;
+        }
+        .spec_select ul li a
+        {
+            color: #666666;
+            display: inline-block;
+            padding: 5px;
+            font-style: normal;
+            border-radius: 3px;
+            border: 1px solid #bbbbbb;
+            line-height: 20px;
+            height: 30px;
+            margin: 5px 0 5px 5px;
+        }
+        .spec_select ul li .click
+        {
+            line-height: 20px;
+            background: #FF7612;
+            border: 1px solid #FF7612;
+            height: 30px;
+            position: relative;
+            padding: 5px;
+            color: #fff;
+        }
+        
+        .spec_select input
+        {
+            height: auto;
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: .1rem;
+            font-size: .2rem;
+            font-weight: bold;
+            color: #333;
+            background: #eaeaea;
+            border-radius: .01rem;
+            border: 1px solid #bbbbbb;
+            border-bottom-color: #c5c5c5;
+            box-shadow: 0 1px 3px rgba(0,0,0,.05);
+            vertical-align: middle;
+            cursor: pointer;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-appearance: none;
+        }
+        .spec_select ul li .clickinput
+        {
+            background: #EA5529;
+            border: 1px solid #ff0000;
+            position: relative;
+            padding: .1rem;
+            color: #fff;
+        }
+        .mui-input-row label{font-size:14px;margin:0 0 10px 0}
+		#footer img{display:block;}
+
+    </style></head><body><header class="mui-bar mui-bar-nav"><a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left pro-menu-height"></a><a id="menu" class="pro-menu-height mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a><h1 class="mui-title"><img src="/images/logo.png" width="106" /></h1></header><div id="topPopover" class="mui-popover"><div class="mui-popover-arrow"></div><div class="mui-scroll-wrapper"><div class="mui-scroll"><ul class="mui-table-view blackbackground"><li class="mui-table-view-cell"><a href="#">消息</a></li><li class="mui-table-view-cell"><a href="#">首页</a></li><li class="mui-table-view-cell"><a href="#">搜索</a></li><li class="mui-table-view-cell"><a href="#">我的关注</a></li><li class="mui-table-view-cell"><a href="#">个人中心</a></li><li class="mui-table-view-cell"><a href="#">浏览记录</a></li></ul></div></div></div><div class="mui-content"><div id="slider" class="mui-slider"><div class="mui-slider-group" id="ShelvesPictureView"><div class="mui-slider-item"><a href="#"><img src="/Views/upload/hct/2018-08-13/ShelvesPicture1.jpg" /></a></div><div class="mui-slider-item"><a href="#"><img src="/Views/upload/hct/2018-08-13/ShelvesPicture2.jpg" /></a></div><div class="mui-slider-item"><a href="#"><img src="/Views/upload/hct/2018-08-13/ShelvesPicture3.jpg" /></a></div><div class="mui-slider-item"><a href="#"><img src="/Views/upload/hct/2018-08-13/ShelvesPicture4.jpg" /></a></div></div><div class="mui-slider-indicator" id="ShelvesPictureIndicatorView"><div class="mui-indicator"></div><div class="mui-indicator"></div><div class="mui-indicator"></div><div class="mui-indicator"></div></div></div><ul class="mui-table-view mui-table-view-striped mui-table-view-condensed"><li class="mui-table-view-cell"><div class="mui-table"><div class="mui-table-cell mui-col-xs-10"><h4 class="mui-ellipsis-2">
+                            回春态牡蛎压片糖果-1盒</h4><h5>
+                            单笔订单满2件减10元2</h5></div><div class="mui-table-cell mui-col-xs-2 mui-text-right"><span class="mui-h5"></span></div></div></li><br /><div class="mui-card-footer"><a class="mui-card-link price">￥358.00</a></div><div class="spec_select"><ul><span>套餐组合</span><li id="ShelvesItemView"><a href="/home/gooddetail/2/hct001/1/3" class="click">1盒</a><a href="/home/gooddetail/2/hct002/1/3" class="">3盒</a><a href="/home/gooddetail/2/hct003/1/3" class="">5盒</a><a href="/home/gooddetail/2/hct004/1/3" class="">8盒</a><a href="/home/gooddetail/2/hct005/1/3" class="">18盒</a></li></ul></div><div class="mui-input-row"><label>
+                    购买数量</label><div class="mui-numbox" data-numbox-min="1"><button class="mui-btn mui-btn-numbox-minus" type="button">
+                        -</button><input id="buynumber" class="mui-input-numbox" type="number" /><button class="mui-btn mui-btn-numbox-plus" type="button">
+                        +</button></div></div></ul><br /><ul class="mui-table-view"><li class="mui-table-view-cell word-size">白条【白条支付】3期免息</li><li class="mui-table-view-cell word-size"><a class="mui-navigate-right">促销 此价格不与套装优惠同时享受
+            </a></li><li class="mui-table-view-cell word-size"><a class="mui-navigate-right">已选 1件 </a></li></ul><br /><ul class="mui-table-view"><div id="footer"><li class="mui-table-view-cell word-size">商品详情</li><img src="/Views/upload/hct/2018-08-13/img/hctdetail_01.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_02.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_03.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_04.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_05.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_06.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_07.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_08.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_09.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_10.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_11.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_12.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_13.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_14.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_15.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_16.jpg" width="100%" /><img src="/Views/upload/hct/2018-08-13/img/hctdetail_17.jpg" width="100%" /></div></ul></div><nav class="mui-bar mui-bar-tab"><a class="mui-tab-item mui-active" href="/home/welcome"><span class="mui-icon mui-icon-home"></span><span class="mui-tab-label">首页</span></a><a class="mui-tab-item" href="/home/goodshopcart"><span class="mui-icon mui-icon-email"><span class="mui-badge" id="cartcount">0</span></span><span class="mui-tab-label">购物车</span></a><a class="addcart" href="javascript:;" onclick="addcart();"><span class="addcart-label">加入购物车</span></a><a class="buynow" href="javascript:;" onclick="addorder();"><span class="addcart-label" style="-webkit-animation:btnlight 1s infinite;animation:btnlight 1s infinite;">立即购买</span></a></nav><script type="text/javascript" src="/js/mui.min.js"></script><script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="/js/jquery.ext.js"></script><script type="text/javascript">
+        mui.init();
+
+        mui.plusReady(function () {
+        });
+
+        mui('.mui-scroll-wrapper').scroll();
+        mui('body').on('shown', '.mui-popover', function (e) {
+            //console.log('shown', e.detail.id);//detail为当前popover元素
+        });
+        mui('body').on('hidden', '.mui-popover', function (e) {
+            //console.log('hidden', e.detail.id);//detail为当前popover元素
+        });
+    </script><script type="text/javascript">
+        $(function () {
+            $(".spec_select ul li a").click(function () {
+                $(this).addClass("click").siblings().removeClass("click");
+            })
+        })
+    </script><script type="text/javascript">
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval: 2000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script><script type="text/javascript">
+          var sguidval = "2";
+          var gcodeval = "hct001";
+
+          addcart = function () {
+              var buyval = $("#buynumber").val();
+
+              var d = { ShelvesGUID: sguidval, GoodsCode: gcodeval, Quantity: buyval };
+              var url = "/api/mall/cart/addcart";
+              myAjax(d, url, function (r) {
+                  if (!r.IsSuccess) {
+                  }
+                  else {
+                      $("#cartcount").text(r.Data);
+                  }
+              });
+          }
+    </script><script type="text/javascript">
+          var sguidval = "2";
+          var gcodeval = "hct001";
+
+          addorder = function () {
+              var buyval = $("#buynumber").val();
+
+              var d = { ShelvesGUID: sguidval, GoodsCode: gcodeval, Quantity: buyval };
+              var url = "/api/mall/cart/addbuynow";
+              myAjax(d, url, function (r) {
+                  if (!r.IsSuccess) {
+                  }
+                  else {
+                      window.location.href = "/home/goodpay/0/1";
+                  }
+              });
+          }
+    </script></body></html>

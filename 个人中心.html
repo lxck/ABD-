@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>个人中心</title>
+  <link rel="stylesheet" href="css/mui.min.css" />
+  <link rel="stylesheet" href="css/icons-extra.css" />
+  <style>
+        .xqahref
+        {
+            display: inline-block;
+            border-radius: 6px;
+            border: 1px solid #CCCCCC;
+            margin: 5px;
+            padding: 5px 12px;
+            color: #333333;
+            font-size: 14px;
+        }
+        .mui-table-view-cell span
+        {
+            color: #666;
+        }
+        
+ #oval
+        {position:relative;
+            width: 100%;
+            height: 200px;
+            background:url(images/centerbg.png) top center no-repeat;
+          background-size:100% 100%;-moz-background-size:100% 100%;
+        }	
+		
+		/*
+		#oval2 {
+    width: 100%;
+	height:200px;
+    background:url(images/centerbg4.png) top right no-repeat;
+   background-size:90%;
+}  
+       	#oval {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top right, #FF7612 0%, #FF7612 15%, #FF7612 50%);
+   -webkit-border-radius: 50% 50% 50% 50% / 0% 0% 30% 30%;
+    border-radius: 0% 0% 80% 80% / 12% 12% 20% 20%;
+} */
+        .managepic
+        {
+            width: 80px;
+            padding: 40px 0 0 20px;
+            float: left;
+        }
+        .managepic img
+        {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .managetitle
+        {
+            float: left;
+            padding: 36px 0 0 30px;
+        }
+        .managename
+        {
+            color: #ffffff;
+        }
+        .managevip
+        {
+            margin: 10px 0 0 0;
+            padding: 18px 8px 18px 60px;
+            border-radius: 6px;
+            color: #eed9cb;
+            background: url(images/VIP.png) no-repeat #cc681f;
+            background-position: 3px;
+            background-size: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+		 .managevip-no
+        {
+            margin: 10px 0 0 0;
+            padding: 18px 8px 18px 60px;
+            border-radius: 6px;
+            color: #eed9cb;
+            background: url(images/VIP-no.png) no-repeat #cc681f;
+            background-position: 3px;
+            background-size: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .managecredit
+        {
+            margin: 10px 0 0 0;
+        }
+        .managecredit a
+        {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: #eed9cb;
+            background: #cc681f;
+            text-align: center;
+            font-size: 12px;
+        }
+        .mui-content-padded
+        {
+            margin: 10px;
+        }
+        .mui-media-body
+        {
+            overflow: none !important;
+            text-overflow: none !important;
+        }
+        .geren-center li
+        {
+            border: 0 !important;
+        }
+        .mui-badge{font-size:12px;line-height:1;display:inline-block;padding:3px 6px;color:#fff;border-radius:100px;background-color:#FF0000}
+        .mui-badge{position:relative;right:-15px;}
+		#superhuiy{position:absolute;bottom:-5.3px;right:0;width:120px;}
+		#superhuiy img{width:100%;max-width:160px!important;}
+		
+    </style>
+ </head>
+ <body>
+  <header class="mui-bar mui-bar-nav">
+   <h1 class="mui-title"><img src="images/logo.png" width="106" /></h1>
+  </header>
+  <div class="mui-content">
+  
+   <div id="oval">
+    <div id="oval2">
+     <div class="managepic">
+      <img src="http://thirdwx.qlogo.cn/mmopen/QLAAcKfe0K9EOBSHyMXxiaGpgl2yaGS8sX6yHPcxgRG1OhXiaTYYM0jtMaLUvoUJicFWrrwiciaDfXqGrSwd0AKibPq0BXlbwKbAOJ/132" />
+     </div>
+     <!--div class="managetitle">
+      <h4 class="managename"> DC</h4>
+      <h3 class="managevip">12563</h3>
+     </div-->
+     
+      <div class="managetitle">
+      <h4 class="managename"> DC</h4>
+      <h3 class="managevip-no">12563</h3>
+     </div>
+     
+     <div id="superhuiy"><a href="#"><img src="images/9da.png" /></a></div>
+    </div>
+   </div>
+   
+  
+   <ul class="mui-table-view mui-grid-view mui-grid-9 geren-center" style="background: #FFF;
+            border: 0">
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%;"><a href="/home/orderlist"><span class="mui-icon mui-icon-extra mui-icon-extra-card" style="font-size: 1.5em"><span class="mui-badge">0</span></span>
+      <div class="mui-media-body" style="font-size: 14px">
+        待付款
+      </div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%"><a href="/home/orderlist"><span class="mui-icon mui-icon-extra mui-icon-extra-express" style="font-size: 1.5em"><span class="mui-badge">21</span></span>
+      <div class="mui-media-body" style="font-size: 14px">
+        待收货
+      </div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%;
+                background: url(images/arr.jpg) no-repeat; background-position: center left;
+                background-size: 20px;"><a href="/home/orderlist"><span class="mui-icon mui-icon-extra mui-icon-extra-order" style="font-size: 1.5em; color: #FF7612"></span>
+      <div class="mui-media-body" style="font-size: 14px">
+        我的订单
+      </div></a></li>
+   </ul>
+   <ul class="mui-table-view mui-grid-view mui-grid-9 geren-center" style="background: #FFF;
+            border: 0">
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%"><a href="/me/userpoint"><span class="mui-icon mui-icon-extra" style="font-size: 1.5em"> 0</span>
+      <div class="mui-media-body" style="font-size: 14px">
+        积分
+      </div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%"><a href="/me/usercoupon/-1/1"><span class="mui-icon mui-icon-extra" style="font-size: 1.5em"> 2</span>
+      <div class="mui-media-body" style="font-size: 14px">
+        优惠券
+      </div></a></li>
+    <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2" style="width: 33.3%;
+                background: url(images/arr.jpg) no-repeat; background-position: center left;
+                background-size: 20px;"><a href="#"><span class="mui-icon mui-icon-extra mui-icon-extra-gold" style="font-size: 1.5em; color: #FF7612"></span>
+      <div class="mui-media-body" style="font-size: 14px">
+        我的钱包
+      </div></a></li>
+   </ul>
+   <br />
+   <ul class="mui-table-view">
+    <li class="mui-table-view-cell"><a href="/me/usercoupon/-1/1" class="mui-navigate-right mui-icon mui-icon-extra mui-icon-extra-gift" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666;">优惠券</span></a></li>
+    <li class="mui-table-view-cell"><a href="/home/orderlist" class="mui-navigate-right  mui-icon-extra mui-icon-extra-order" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666">全部订单</span></a></li>
+    <li class="mui-table-view-cell"><a href="/me/userpoint" class="mui-navigate-right mui-icon-extra mui-icon-extra-rank" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666">我的积分</span></a></li>
+    <li class="mui-table-view-cell"><a href="/me/useraddress/-1/1" class="mui-navigate-right mui-icon mui-icon-location" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666">收货地址</span></a></li>
+    <li class="mui-table-view-cell"><a href="/me/userprotocol" class="mui-navigate-right mui-icon-extra mui-icon-extra-xiaoshuo" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666">法律条款</span></a></li>
+    <li class="mui-table-view-cell"><a href="/me/userfaq" class="mui-navigate-right mui-icon mui-icon-help" style="font-size: 16px; padding: 20px 0 20px 14px;"><span style="color: #666">常见问题</span></a></li>
+   </ul>
+   <div class="mui-content-padded">
+    <button type="button" class="mui-btn mui-btn-danger mui-btn-block" style="background: #FF7612"> 退出</button>
+   </div>
+   <br />
+   <br />
+   <br />
+  </div>
+  <footer class="bottom-btn-bar weui_tabbar">
+   <a href="/home/welcome" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a>
+   <a href="/home/orderlist" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a>
+   <a href="/home/goodshopcart" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_shopcart">
+     <span class="mui-badge">6</span>
+    </div><p class="weui_tabbar_label">购物车</p></a>
+   <a href="/me/usercenter" class="weui_tabbar_item weui_bar_item_on">
+    <div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a>
+  </footer>
+  <script src="js/mui.min.js"></script>
+ </body>
+</html>

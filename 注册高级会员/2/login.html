@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>手机快速登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/base.css" charset="gbk"/>
+<link rel="stylesheet" type="text/css" href="css/index.css" charset="gbk"/>	
+</head>
+
+<body id="body">
+
+<div id="top">
+<div class="header hfix">
+<a href="javascript:;" onClick="goback()" class="b_l"></a>
+<div class="tnav" id="sbar">
+<a href="#" class="ta on" data-id="0">手机快速登录</a>
+</div>
+<a href="javascript:;" onClick="gtns()" class="b_r dor"></a>
+</div>
+</div>
+<div class="gtn" id="gtn"></div>
+
+
+<div class="new-ct main">
+
+
+<div class="form">
+	<div class="div-phone">
+		<input type="text" id="phone" class="infos" placeholder="请输入11位手机号" />
+		<a href="javascript:;" class="send1" onclick="sends.send();">发送验证码</a>
+	</div>
+	<div class="div-ranks">
+	<input type="text" id="ranks" class="infos" placeholder="请输入短信验证码"  />
+	</div>
+	<div class="div-conform">
+		<a href="javascript:;" class="conform" onclick="sends.conform();">快速登录</a>
+	</div>
+</div>
+<script src="js/jquery-1.6.2.min.js"></script>
+<script>
+var sends = {
+	checked:1,
+	send:function(){
+			var numbers = /^1\d{10}$/;
+			var val = $('#phone').val().replace(/\s+/g,""); //获取输入手机号码
+			if($('.div-phone').find('span').length == 0 && $('.div-phone a').attr('class') == 'send1'){
+				if(!numbers.test(val) || val.length ==0){
+					$('.div-phone').append('<span class="error">手机格式错误</span>');
+					return false;
+				}
+			}
+			if(numbers.test(val)){
+				var time = 30;
+				$('.div-phone span').remove();
+				function timeCountDown(){
+					if(time==0){
+						clearInterval(timer);
+						$('.div-phone a').addClass('send1').removeClass('send0').html("发送验证码");
+						sends.checked = 1;
+						return true;
+					}
+					$('.div-phone a').html(time+"S后再次发送");
+					time--;
+					return false;
+					sends.checked = 0;
+				}
+				$('.div-phone a').addClass('send0').removeClass('send1');
+				timeCountDown();
+				var timer = setInterval(timeCountDown,1000);
+			}
+	}
+}
+</script>
+
+				
+</div>
+
+   
+	<div class="login-area" id="footer">
+        	<div class="login">
+			<a href="login.html">登录</a><span class="lg-bar">|</span><a href="login.html">注册</a>
+    		<span  class="new-fr"><a href="#">反馈</a><span class="lg-bar">|</span><a href="#top">回到顶部</a></span>
+            </div>
+        	<div class="version"><a href="#">微商城</a><a href="javascript:void(0)" class="on">APP版</a><a href="#" id="toPcHome">云康健官网</a></div>
+            <div class="copyright">Copyright 2016 <a href="http://www.wikicaring.com" target="_blank">广西云康健</a> All rights reserved.</div>
+        </div>
+
+ 
+ <br /><br /><br />
+<div id="bnav">
+  <ol>
+<li class="fw"><a href="#"><span>服务</span></a></li>
+<li class="zs"><a href="#"><span>知识</span></a></li>
+<li class="cu"><a href="#"><span>我的客服</span></a></li>
+<li class="gr"><a href="#"><span>个人中心</span></a></li>
+</ol>
+    <!--ul>
+        <li><a href="/Manager/Index.aspx"><img src="images/icon_dp.png" alt="" /><span>服务</span></a></li>
+        <li><a href="/Manager/Knowledge.aspx"><img src="images/brain.png" alt="" /><span>知识</span></a></li>
+        <li><a href="/Manager/Agent.aspx"><img src="images/icon_dp2.png" alt="" /><span>我的客服</span></a></li>
+        <li><a href="/Manager/User.aspx"><img src="images/wode2.png" alt="" /><span>个人中心</span></a></li>
+    </ul-->
+
+    </div>
+  
+</body>
+</html>

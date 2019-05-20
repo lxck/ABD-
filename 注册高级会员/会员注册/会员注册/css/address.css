@@ -1,0 +1,57 @@
+@font-face {font-family:iconfonts;src:url(fonts/iconfonts.woff) format('woff')}
+.address-list {margin-top:15px}
+.address-list li {padding-left:15px;background-color:#fff;position:relative}
+.address-add {position:fixed;bottom:0;z-index:10;width:100%;height:50px;background-color:#fff;border-top:1px solid #ddd;text-align:center}
+.address-add-font {height:3pc;line-height:50px;font-size:15px;color:#000;background:url(../images/address-add1.png) no-repeat;background-size:15px;background-position-y:center;display:inline-block;padding-left:1.4rem;white-space:nowrap}
+.address-content {border-bottom:1px solid #f0f0f0;padding-right:15px}
+.address-info {padding:9pt 35px 9pt 0}
+.address-info p.customer-info,.address-info p.customer-info * {color:#a9a9a9}
+.address-info p.address-dtl {color:#2f2f2f}
+.address-info p {line-height:22px;font-size:14px}
+.address-info p,.contect-name {white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contect-name {display:inline-block;max-width:30%;margin-right:10px}
+.contect-gender {display:inline-block;position:absolute}
+.contect-phone {float:right}
+.clearfix {zoom:1}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.address-selectable.address-selected .address-info {background:url(../images/address-right1.png) no-repeat right;background-size:1pc 11px}
+.address-list li.address-noscope {background-color:#f6f6f6}
+.address-noscope .address-info {background:url(../images/address-noscope.png) no-repeat right 50%;background-size:58px 58px}
+.address-compile .address-content {padding-right:95px}
+.contect-button {float:right;display:none}
+.address-compile .contect-button {display:block;position:absolute;top:50%;margin-top:-18.5px;right:15px}
+.contect-button .edit {margin-right:14px;background-position:8px center}
+.contect-button .dele {background-position:-41px center}
+.contect-button a {display:inline-block;width:2pc;height:2pc;background:url(../images/address-edit_dele.png) no-repeat;background-size:65px 1pc}
+.fill-section-wrap h3 {line-height:34px;padding:0 15px;border-bottom:1px solid #f0f0f0;font-size:14px;background:#f8f8f8;font-weight:400;color:#656565}
+.fill-input,.fill-select {width:100%;height:44px;line-height:38px;border:0;font-size:14px}
+.fill-section {padding-left:15px;background:#fff}
+.fill-section,.fill-section li {border-bottom:1px solid #f0f0f0}
+.fill-section li {font-size:14px}
+.fill-section li:last-child {border-bottom:0}
+.fill-type {float:left;line-height:44px}
+.customer-section .fill-type {width:50px}
+.addr-icon {float:left;margin-top:14px;color:#888}
+.addr-arrow {float:right;margin:1pc 9pt 0 0;width:10px;height:10px;border:1px solid #ddd;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.addr-choose {display:block;padding:0;line-height:44px;font-size:13px;color:#646464;border:0;text-overflow:ellipsis;white-space:nowrap;width:85%}
+.address-section .fill-section-right {display:block;height:44px;margin-left:105px}
+.customer-section .fill-section-right {margin-left:50px}
+.customer-gender {border-top:1px solid #f0f0f0;height:44px;}
+.i-circle {border-radius:50%;display:inline-block}
+
+.radio-choice>span {float:left;width:50%;height:44px;line-height:44px;padding-left:10px;box-sizing:border-box}
+.radio-choice>span .i-circle {float:left;width:1pc;height:1pc;line-height:1pc;border:1px solid #999;margin:9pt 8px 0 0}
+.radio-choice>span.on .i-circle {width:18px;height:18px;line-height:18px;border:0;background-color:#ff7612;text-align:center;color:#6b450a;font-size:14px;font-family:iconfonts}
+.radio-choice>span.on .i-circle:before {content:'\2713';color:#fff}
+.radio-choice label{margin:0 20px 0 2px;line-height:10px; position:relative;bottom: 3px;}
+
+.poi-list ul {list-style:none;width:100%;text-align:left;margin:0 0 0 15px;padding:0 0 65px}
+.poi-list li {height:59px;padding-top:6px;position:relative;border-bottom:1px solid #d3d3d3}
+.poi-title {line-height:27px}
+.poi-department,.poi-title {font-size:14px;color:#646464;font-weight:400;display:block;width:92%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.poi-department {line-height:59px}
+.poi-address {font-size:9pt;color:gray;height:20px;line-height:20px;margin:0;width:92%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block}
+.poi-city,.poi-latlng {line-height:22px;display:none}
+.poi-list .active {width:1pc;height:1pc;display:inline-block;background:url(../images/currentPos.png) no-repeat right center;background-size:1pc 1pc;position:absolute;right:30px;top:50%;margin-top:-8px}
+.weui_search_cancel {color:#ff7612}
+.weui_search_inner .weui_search_input {color:#646464;}

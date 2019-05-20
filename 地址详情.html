@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>地址详情</title>
+  <script type="text/javascript" src="js/area.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="css/mui.min.css" />
+  <style>
+        h5
+        {
+            margin: 0 14px;
+            padding: 10px 0 0 0;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+        label
+        {
+            font-size: 14px;
+            color: #666;
+        }
+        input
+        {
+            font-size: 14px;
+        }
+        .mui-table-view li
+        {
+            border: 0 !important;
+        }
+        .mui-table-view-cell
+        {
+            border: 0 !important;
+        }
+        .mui-input-row
+        {
+            height: auto !important;
+        }
+        .mui-input-row select
+        {
+            border-bottom: 1px solid #E4E3E6 !important;
+            display: block;
+            font-size: 14px !important;
+        }
+		.mui-checkbox input[type=checkbox]:checked:before,.mui-radio input[type=radio]:checked:before{color:#FF7613}
+    </style>
+ </head>
+ <body>
+  <header class="mui-bar mui-bar-nav">
+   <h1 class="mui-title"><img src="images/logo.png" width="106" /></h1>
+  </header>
+  <header class="mui-bar mui-bar-nav" style="height: 45px; margin: 44px 0 0 0">
+   <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+   <h1 class="mui-title">地址详情</h1>
+  </header>
+  <br />
+  <br />
+  <br />
+  <div class="mui-content">
+   <form class="mui-input-group">
+    <div class="mui-input-row">
+     <label> 收货人：</label>
+     <input type="text" class="mui-input-clear" placeholder="收货人" value="CC" />
+    </div>
+    <div class="mui-input-row">
+     <label> 联系方式：</label>
+     <input type="text" class="mui-input-clear" placeholder="联系方式" value="13400000000000" />
+    </div>
+    <div class="mui-input-row">
+     <label> 所在省份：</label>
+     <input type="hidden" id="hid_province" value="" />
+     <input type="hidden" id="hid_city" value="" />
+     <input type="hidden" id="hid_county" value="" />
+     <select id="s_province" name="s_province"></select>
+    </div>
+    <div class="mui-input-row">
+     <label> 所在城市：</label>
+     <select id="s_city" name="s_city"></select>
+    </div>
+    <div class="mui-input-row">
+     <label> 所在区域：</label>
+     <select id="s_county" name="s_county"></select>
+    </div>
+    <script type="text/javascript">
+            var province = $("#hid_province").val();
+            var city = $("#hid_city").val();
+            var county = $("#hid_county").val();
+            $(function () {
+                setup();
+                preselect(province, city, county);
+            });
+        </script>
+    <div class="mui-input-row">
+     <label> 详细地址：</label>
+     <input type="text" class="mui-input-clear" placeholder="街道、楼牌号等" value="XXXXX楼" />
+    </div>
+  
+    <h5 class="mui-content-padded">设为默认地址</h5>
+					<div class="mui-input-row mui-checkbox">
+						<label>注：每次下单时会使用该地址</label>
+						<input name="checkbox1"  type="checkbox" >
+					</div>
+					
+			
+    <a class="mui-btn mui-btn-danger mui-btn-block" style="background: #F40301; border-radius: 30px;
+            margin: 20px auto; width: 80%;">保存并使用</a>
+   </form>
+  </div>
+  <footer class="bottom-btn-bar weui_tabbar">
+   <a href="/home/welcome" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a>
+   <a href="/home/orderlist" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a>
+   <a href="/home/goodshopcart" class="weui_tabbar_item">
+    <div class="weui_tabbar_icon order_shopcart"></div><p class="weui_tabbar_label">购物车</p></a>
+   <a href="/me/usercenter" class="weui_tabbar_item weui_bar_item_on">
+    <div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a>
+  </footer>
+  <script type="text/javascript" src="js/mui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ext.js"></script>
+  <script type="text/javascript">
+        window.onload = function () {
+            var Province = "上海市";
+            var City = "市辖区";
+            var County = "徐汇区";
+
+            if (Province != null) {
+                document.getElementById('hid_province').value = Province;
+                document.getElementById('hid_city').value = City;
+                document.getElementById('hid_county').value = County;
+
+                setup();
+                preselect(Province, City, County);
+            }
+        }
+    </script>
+ 
+ </body>
+</html>

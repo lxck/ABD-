@@ -1,0 +1,113 @@
+﻿
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>我的购物车</title><link rel="stylesheet" href="css/cartstyle.css" /><link rel="stylesheet" href="css/cart.css" />
+<style>
+  body
+            {
+                background: #f3f3f3;
+            }
+   .mui-badge
+        {
+            font-size: 12px;
+            line-height: 1;
+            display: inline-block;
+            padding: 3px 6px;
+            color: #fff;
+            border-radius: 100px;
+            background-color: #FF0000;
+        }
+        .mui-badge
+        {
+            position: relative;
+            right: -15px;
+        }
+
+.mui-numbox{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;outline:0;-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{margin:0;-webkit-appearance:none}
+.mui-numbox{position:relative;display:inline-block;overflow:hidden;width:120px;height:35px;padding:0 40px;vertical-align:top;vertical-align:middle;border:solid 1px #bbb;border-radius:3px;background-color:#efeff4}
+.mui-numbox [class*=btn-numbox],.mui-numbox [class*=numbox-btn]{font-size:22px;font-weight:400;line-height:100%;position:absolute;top:0;overflow:hidden;width:40px;height:100%;padding:0;color:#555;border:none;border-radius:0;background-color:#f9f9f9}
+.mui-numbox [class*=btn-numbox]:active,.mui-numbox [class*=numbox-btn]:active{background-color:#ccc}
+.mui-numbox [class*=btn-numbox][disabled],.mui-numbox [class*=numbox-btn][disabled]{color:silver}
+.mui-numbox .mui-btn-numbox-plus,.mui-numbox .mui-numbox-btn-plus{right:0;border-top-right-radius:3px;border-bottom-right-radius:3px;border-left:solid 1px #ccc!important;}
+.mui-numbox .mui-btn-numbox-minus,.mui-numbox .mui-numbox-btn-minus{left:0;border-top-left-radius:3px;border-bottom-left-radius:3px}
+.mui-numbox .mui-input-numbox,.mui-numbox .mui-numbox-input{display:inline-block;overflow:hidden;width:100%!important;height:100%;margin:0;padding:0 3px!important;text-align:center;text-overflow:ellipsis;word-break:normal;border:none!important;border-right:solid 1px #ccc!important;border-left:solid 1px #ccc!important;border-radius:0!important;font-size:16px;font-weight:bold;}
+</style>
+</head><body><header class="page-hd"><div class="navBtnSilder"></div><div class="logo"><img src="images/logo.png" alt="" /></div><div class="talkIcon"></div></header><br /><br /><br /><div class="membersbox pad50"><input type="hidden" id="j-xgVal" value="{&quot;2554471&quot;:0}" /><section class="mcart_tit"><a href="JavaScript:history.go(-1)" style="float:left;padding:4px 0 0 0"><img src="images/dr.png" /></a><span>购物车</span><a href="javascript:;" onclick="delbuycart();"><b class="del-item">删除商品</b></a></section><br /><br /><br /><section class="mcart_goods"><ul><div id="GoodsShopCartView"><li class="g-box"><section class="mcart_goods_img"><a href="#"><img src="pimages/mlsjg003.jpg" width="80" height="80" /></a><b></b><label class="btn-check J-inp"><em class="cur"></em></label><input type="checkbox" class="checkbox" id="CheckBox2067" name="checkbox[]" value="2067" checked="checked" /></section><section class="mcart_goods_infor g-flex clearfix"><section class="mcart_goods_title"><a href="#">回春一号牡蛎枸杞压片糖果-1盒</a><p>1盒</p></section><section class="num"><i><span style="font-size:10px">&yen;</span><span class="integer"></span><span class="decimal font12"></span><span class="nums">358.00</span></i><del><span style="font-size:10px">&yen;</span>458.00</del><div class="mui-numbox" data-numbox-min="0"><button class="mui-btn mui-btn-numbox-minus" type="button">
+                            -</button><input type="hidden" id="InputNumber2067" name="InputNumber2067" class="j-rcNum appearance" value="5" /><input type="hidden" class="j-rcPrice" value="358.00" /><input class="mui-input-numbox" type="number" id="Input2067" name="Input2067" value="5" disabled="true"  /><input type="hidden" id="hidden_RealCost2067" value="358.00" /><input type="hidden" id="hidden_ShoppingCartID2067" value="2067" /><button class="mui-btn mui-btn-numbox-plus" type="button">
+                            +</button></div></section></section></li><li class="g-box"><section class="mcart_goods_img"><a href="#"><img src="pimages/tyzw002.jpg" width="80" height="80" /></a><b></b><label class="btn-check J-inp"><em class="cur"></em></label><input type="checkbox" class="checkbox" id="CheckBox2068" name="checkbox[]" value="2068" checked="checked" /></section><section class="mcart_goods_infor g-flex clearfix"><section class="mcart_goods_title"><a href="#">美纤秀丽固体饮料-1盒</a><p>1盒</p></section><section class="num"><i><span style="font-size:10px">&yen;</span><span class="integer"></span><span class="decimal font12"></span><span class="nums">168.00</span></i><del><span style="font-size:10px">&yen;</span>268.00</del><div class="mui-numbox" data-numbox-min="0"><button class="mui-btn mui-btn-numbox-minus" type="button">
+                            -</button><input type="hidden" id="InputNumber2068" name="InputNumber2068" class="j-rcNum appearance" value="1" /><input type="hidden" class="j-rcPrice" value="168.00" /><input class="mui-input-numbox" type="number" id="Input2068" name="Input2068" value="1" disabled="true"  /><input type="hidden" id="hidden_RealCost2068" value="168.00" /><input type="hidden" id="hidden_ShoppingCartID2068" value="2068" /><button class="mui-btn mui-btn-numbox-plus" type="button">
+                            +</button></div></section></section></li><li class="g-box"><section class="mcart_goods_img"><a href="#"><img src="pimages/mlsjg001.jpg" width="80" height="80" /></a><b></b><label class="btn-check J-inp"><em class="cur"></em></label><input type="checkbox" class="checkbox" id="CheckBox2069" name="checkbox[]" value="2069" checked="checked" /></section><section class="mcart_goods_infor g-flex clearfix"><section class="mcart_goods_title"><a href="#">回春态牡蛎压片糖果-1盒</a><p>1盒</p></section><section class="num"><i><span style="font-size:10px">&yen;</span><span class="integer"></span><span class="decimal font12"></span><span class="nums">358.00</span></i><del><span style="font-size:10px">&yen;</span>458.00</del><div class="mui-numbox" data-numbox-min="0"><button class="mui-btn mui-btn-numbox-minus" type="button">
+                            -</button><input type="hidden" id="InputNumber2069" name="InputNumber2069" class="j-rcNum appearance" value="1" /><input type="hidden" class="j-rcPrice" value="358.00" /><input class="mui-input-numbox" type="number" id="Input2069" name="Input2069" value="1" disabled="true"  /><input type="hidden" id="hidden_RealCost2069" value="358.00" /><input type="hidden" id="hidden_ShoppingCartID2069" value="2069" /><button class="mui-btn mui-btn-numbox-plus" type="button">
+                            +</button></div></section></section></li></div></ul></section><section class="mcart_pay"><label class="J-quanx"><b class="cur"></b>全选</label><section class="mcart_pay_ri"><span><p class="first-line"><b>合计：
+            <strong><em id="allcost" style="font-size:1.5rem;font-weight:bold;"></em></strong></b></p></span></section><a id="buyer" class="gopayment" href="javascript:;" onclick="addbuycart();">去结算(<i class="j-totalNum"></i>)</a></section></div><footer class="bottom-btn-bar weui_tabbar"><a href="/home/welcome" class="weui_tabbar_item"><div class="weui_tabbar_icon user_index"></div><p class="weui_tabbar_label">首页</p></a><a href="/home/orderlist/0/1" class="weui_tabbar_item"><div class="weui_tabbar_icon order_list"></div><p class="weui_tabbar_label">订单</p></a><a href="/home/goodshopcart" class="weui_tabbar_item weui_bar_item_on"><div class="weui_tabbar_icon order_shopcart"><span class="mui-badge">30</span></div><p class="weui_tabbar_label">购物车</p></a><a href="/me/usercenter" class="weui_tabbar_item"><div class="weui_tabbar_icon user_center"></div><p class="weui_tabbar_label">个人中心</p></a></footer><script type="text/javascript" src="js/mui.min.js"></script><script type="text/javascript" src="js/cart-lib-min.js"></script><script type="text/javascript" src="js/cart.js"></script><script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="js/jquery.ext.js"></script><script type="text/javascript">
+        mui('body').on('change', '.mui-input-numbox', function () {
+            var str = 0;
+            $(".mui-input-numbox").each(function () {
+                var name = $(this).attr("id");
+                var aa = $(this).val();
+                var bb = name.replace('Input', '');
+                $("#InputNumber" + bb).text(aa);
+                var cc = $("#hidden_RealCost" + bb).val();
+                str += aa * cc;
+            });
+            $("#allcost").text("￥" + str.toFixed(2));
+        });
+    </script><script type="text/javascript">
+        addbuycart = function () {
+            //            $(":checkbox").each(function () {
+            //                if ($(this).attr("checked") == "checked") {
+            ////                    var shopcartid = $(this).val()
+            //                    var cc = $(this).$(":tel").val();
+            ////                    var bbb = "InputNumber" + $(this).val()
+            ////                    var inputnumber = document.getElementById(bbb);
+            //                    alert(cc);
+            //                }
+            //            });
+            var i = 0;
+            var arrs = [];
+            $(".g-box").each(function () {
+                if ($(this).find(":checkbox").attr("checked") == "checked") {
+                    var arr =
+                    {
+                        "ShoppingCartID": $(this).find(":checkbox").val(),
+                        "Quantity": $(this).find(".j-rcNum").val()
+                    }
+                    arrs[i] = arr;
+                    i++;
+                }
+            });
+
+            var url = "/api/mall/cart/addbuycart";
+            myAjax(JSON.stringify(arrs), url, function (r) {
+                if (!r.IsSuccess) {
+                }
+                else {
+                    window.location.href = "/home/goodpay/0/1";
+                }
+            });
+        }
+    </script><script type="text/javascript">
+        delbuycart = function () {
+            var i = 0;
+            var arrs = [];
+            $(".g-box").each(function () {
+                if ($(this).find(":checkbox").attr("checked") == "checked") {
+                    var arr =
+                    {
+                        "ShoppingCartID": $(this).find(":checkbox").val(),
+                        "Quantity": $(this).find(".j-rcNum").val()
+                    }
+                    arrs[i] = arr;
+                    i++;
+                }
+            });
+
+            var url = "/api/mall/cart/delbuycart";
+            myAjax(JSON.stringify(arrs), url, function (r) {
+                if (!r.IsSuccess) {
+                }
+                else {
+                    window.location.href = "/home/goodshopcart";
+                }
+            });
+        }
+    </script></body></html>

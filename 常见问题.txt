@@ -1,0 +1,174 @@
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" /><meta content="email=no" name="format-detection" /><title>常见问题</title><style type="text/css">
+		/* Reset */
+		html, body, form, p, h1, h2, h3, h4, h5, h6, dl, ul, ol, li, dt, dd, select,header { margin: 0; padding: 0;}
+		body, select, input, option { color: #333; font: 16px/1.5 "Microsoft YaHei",Arial; -webkit-text-size-adjust: none; }
+		ul, ol, li { list-style-type: none; }
+		em, i { font-style: normal; }
+		a, a:visited { color: #457fe3; }
+		a { text-decoration: none; }
+		a img { border: 0 none; }
+		input::-webkit-input-placeholder { color: #999; }
+		input[type="button"], input[type="text"], input[type="tel"], input[type="password"], input[type="submit"], input[type="email"],button{margin:0;padding:0; outline: none; -webkit-appearance: none; -moz-appearance: none; -webkit-border-image: none; border-image: none; -webkit-border-radius: 0; border-radius: 0;-webkit-box-sizing:border-box; box-sizing:border-box;}
+		input[disabled=""]{opacity: 1;}
+		
+		/* Global */
+		input[type="text"],input[type="tel"],input[type="password"],input[type="email"]{-webkit-transition: background .3s ease-out;transition: background .3s ease-out;}
+		input[type="text"][empty="true"],input[type="tel"][empty="true"],input[type="password"][empty="true"],input[type="email"][empty="true"]{background: #f5f5f5}
+		input[type="text"]:focus,input[type="tel"]:focus,input[type="password"]:focus,input[type="email"]:focus{background: #fff}
+		.default-button,input[type="submit"].default-button{width:100%;height: 40px; background:#507bbf; color:#f5f5f5; -webkit-border-radius: 2px;border-radius: 2px; border:1px solid #507bbf; display: block; -webkit-transition: all .25s linear;transition: all .25s linear;}
+		.default-button[disabled=""],input[type="submit"].default-button[disabled=""]{background:#ccc;border:1px solid #ccc;}
+		/*.default-button,input[type="submit"][disabled=""].default-button[disabled=""]{ background: #f5f5f5; color:#999; border-color:#ccc;}*/
+		
+		body {font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif!important;line-height: 1.5;font-size: 14px;color: #000; padding-bottom: 80px!important;}
+		.hide{display: none!important;}
+		
+		/*加载页面*/
+		.load_wrap{width:100%;height:100%;background:#F2F2F2;padding:60% 0;position: fixed;left: 0;top: 0;z-index: 1000;}
+		.load_pic{width:120px;height:62px;margin:0 auto;}
+		.load_pic img{width:120px;}
+		.load_word{text-align:center;margin-top:15px;font-size:16px;}
+		
+		/* 新旧产品切换导航 */
+		.common-product-nav{width: 278px; margin: 10px auto;}
+		.common-product-nav a{display: block; height: 36px; line-height: 36px; border: 1px solid #ffffff; width: 126px; float: left; text-decoration: none; text-align: center; color: #FF0000; background: #FFFFFF; font-size: 16px;}
+		.common-product-nav a.current {background: #FF0000; color: #FFFFFF; font-weight: bold;}
+		.common-product-nav a.bt-left { letter-spacing: 5px;}
+		.common-product-nav a.bt-right {}
+		.common-product-nav span.bt-line{display: block; float: left; width: 1px; height: 38px; background: #FF0000; margin: 0 10px;}
+		
+		/* 转入转出通用button */
+		.btn-module {padding:4px 10px 0; height: auto; overflow: hidden; }
+		.btn-module li{width: 50%;float:left;}
+		.btn-module a{border-radius:3px; text-decoration:none;color: #ffffff;  border: 1px solid #FF0000;font-size: 16px;padding-left:5px;padding-right:5px;text-overflow:ellipsis;margin:0 5px;height: 42px;line-height: 42px; display: block; text-align: center; white-space: nowrap; overflow: hidden; background: #FF0000;}
+		.btn-module a.btn-disabled{background-color: #d8d8d8;border: none; border: 1px solid #d8d8d8;}
+		.btn-module a.btn-redeem{background: #ffffff; color: #969696; border: 1px solid #EAEAEA;}
+		
+		/* 通用一行按钮 */
+		.common-btn a.orange,.common-btn a.white,.common-btn a.blue,.common-btn a.green,.common-btn a.red{border-radius:3px; text-decoration:none;color: #ffffff;font-size: 16px;text-overflow:ellipsis;height: 42px;line-height: 42px; letter-spacing: 3px; display: block; text-align: center; white-space: nowrap; overflow: hidden;}
+		.common-btn a.orange{background: #ffb413; border: 1px solid #ffb413}
+		.common-btn a.white{background: #ffffff; color: #969696; border: 1px solid #e3e2e7;}
+		.common-btn a.blue{border: 1px solid #4fa0ff; background: #4fa0ff;}
+		.common-btn a.green{border: 1px solid #0ec114; background: #0ec114;}
+		.common-btn a.red{border: 1px solid #FF0000; background: #FF0000;}
+		
+		/* 公共底部样式 */
+		.footer{height: 50px; overflow: hidden; width: 100%; position: fixed; bottom: 0; background: #ffffff; border-top: 1px solid #E1E1E1; z-index: 100;}
+		.footer ul {padding: 0 5px;}
+		.footer ul li{width: 25%;float:left;}
+		.footer ul li a{text-decoration:none;color: #969696; font-size: 16px; padding-left:5px;padding-right:5px;text-overflow:ellipsis;margin:0 5px;height: 50px;line-height: 50px; display: block; text-align: center; white-space: nowrap; overflow: hidden;}
+		@media screen and (max-width:340px){
+		    .footer ul li a{
+		        font-size: 14px;
+		    }
+		}
+		body {
+		    background: #ebebeb;
+		    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 12px;
+		    margin: 0;
+		}
+		
+		body {
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 12px;
+		    background-color: #eeeeee;
+		    color: #434343;
+		}
+		
+		.wrapper {
+			height: auto;
+			overflow: hidden;
+		    line-height: 26px;
+		    color: #676767;
+		}
+		
+		.qa-list{
+		    border-top: 1px solid #eaeaea;
+		    border-bottom: 1px solid #dbdbdb;
+		    padding: 0 22px;
+		    background: #ffffff;
+		    margin-bottom: 10px;
+		    -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+		
+		.qa-list-open .qa-title{
+		    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAMAAAACJixMAAAAbFBMVEUAAADc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NxA79XDAAAAI3RSTlMAAw72xvHq4Nm0nTwwIx3v5L+7kEpDKhQIzamjlotyNjQuF1ktwXsAAAB4SURBVBjTbZBHEoQwDASFYe1lCUvOef7/R0KJAoN1kap7Soeh2wjfItOUCpmJWy7w9w28gYwh5xdv97gLWTz4D5/peBfpZuPjEUgQBTr3iNioy3SwvfOuYqiQ75Q5Gwff8OS5VgCbnrluFqLBfhUhakdsKzDUJmgFjUoG3TCX58UAAAAASUVORK5CYII=) right 22px no-repeat;
+		    background-size:12px 7px;
+		    border-bottom: 1px solid #eeeeee;
+		}
+		
+		.qa-list-open .qa-content{
+		    display: block;
+		}
+		
+		.qa-main-title{
+		    height: 40px;
+		    line-height: 40px;
+		    color: #333333;
+		    background: #eeeeee;
+		    font-size: 16px;
+		    text-indent: 22px;
+		    text-shadow:1px 0 0 #fff;
+		    font-weight: bold;
+		}
+		
+		.qa-title{
+		    color: #333333;
+		    font-size: 14px; height: 50px;
+		    line-height: 50px;
+		    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOBAMAAADH1sFNAAAAHlBMVEUAAADc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzLScOcAAAACXRSTlMAFdTYIPXDDQy5Vs4UAAAATklEQVQI12NgF2CAAsYGhjZFGEconUFokgBUQlMRjEEAJAomoBIQEioBpWBCYBouAWaABWBSYAmo1GRLoARMynIyUAIGXEMYEIDFAUwBALDODGpVPFxvAAAAAElFTkSuQmCC) right 22px no-repeat;
+		    background-size:12px 7px;
+		}
+		
+		.qa-content{
+		    font-size: 14px;
+		    line-height: 21px;
+		    color: #626262;
+		    padding: 18px 0 23px;
+		    display: none;
+		}
+		.po-ctrl-cool{
+		    height: 0;
+		    overflow: hidden;
+		}
+		a{ -webkit-tap-highlight-color:rgba(0,0,0,0); } 
+		a, img {
+			-webkit-touch-callout: none;
+		}
+		html, body {
+			-webkit-user-select: none;
+			user-select: none;
+		}
+		
+		#box{width:100%;margin:0 auto;font-size:16px;}
+.w96{width:97%}
+.w30{width:25%}.w50{width:45%}.w15{width:20%;text-align:right;}
+.huise{color:#8E8E8E}.chengse{color:#F15A0C}.hongse{color:red;}
+.fl{float:left;}
+.fr{float:right;}
+
+.top{width:100%;height:50px;line-height: 50px;font-size: 16px;color: #fff;background-color: #000;}
+.top #ln{height:40px;line-height:40px;float:left;margin:5px 0 0 10px;}
+.top #in label{color:#fff}
+.top #ln img{width:30px;vertical-align:middle;margin:0 .1rem 0 0}
+.top #jg{float:right;margin:0 10px 0 0;}
+.top #jg span{margin:0 .15rem;}
+.top #jg img{width:16px;vertical-align:middle;}
+.top a,a:hover{color:#838383}
+
+    </style><link rel="stylesheet" href="/css/mui.min.css" /></head><body><header class="mui-bar mui-bar-nav"><h1 class="mui-title"><img src="/images/logo.png" width="106" /></h1></header><header class="mui-bar mui-bar-nav" style="height:45px;margin:44px 0 0 0"><a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a><h1 class="mui-title">常见问题</h1></header><br /><br /><br /><br /><br /><a href="tel:4000000000"><img src="/images/phone.png" alt="" style="position:fixed;right: 1rem;bottom: 1rem;width: 4rem;" /></a><div class="wrapper"><p class="qa-main-title">常见服务类问题</p><div class="qa-list"><div class="qa-title">1、下单后几天能到货呢？</div><div class="qa-content">答：24小时内。</div></div><div class="qa-list"><div class="qa-title">1、下单后几天能到货呢？</div><div class="qa-content">答：24小时内。</div></div></div><div class="wrapper"><p class="qa-main-title">常见收费类问题</p><div class="qa-list"><div class="qa-title">1、下单后几天能到货呢？</div><div class="qa-content">答：24小时内。</div></div></div><div class="wrapper"><p class="qa-main-title">下单相关问题</p><div class="qa-list"><div class="qa-title">1、下单后几天能到货呢？</div><div class="qa-content">答：24小时内。</div></div></div><div class="wrapper"><p class="qa-main-title">支付问题</p><div class="qa-list"><div class="qa-title">1、下单后几天能到货呢？</div><div class="qa-content">答：24小时内。</div></div></div><div class="po-ctrl-cool"></div><script src="/js/mui.min.js"></script><script type="text/javascript" src="/js/zepto.js"></script><script type="text/javascript">
+		    $(function () {
+		        var $qaList = $("div.qa-list");
+		        $qaList.on("click", function () {
+		            var $this = $(this);
+		            var isShow = $this.hasClass("qa-list-open");
+		            // $qaList.removeClass("qa-list-open");
+		            if (isShow) {
+		                $(this).removeClass("qa-list-open");
+		            } else {
+		                $(this).addClass("qa-list-open");
+		            }
+		        })
+		    });
+		</script></body></html>

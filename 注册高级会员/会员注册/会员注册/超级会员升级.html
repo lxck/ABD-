@@ -1,0 +1,171 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+
+    <title>超级会员升级</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/area.js"></script>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/js_apply_sign.css" />
+    <link rel="stylesheet" type="text/css" href="css/address.css" />
+    <style type="text/css">
+		input.baoming {
+			position: relative;
+			color: rgba(255,255,255,1);
+			text-decoration: none;
+			background-color: rgba(219,87,5,1);
+			font-weight: 700;
+			font-size: 30px;
+			display: block;
+			padding: 4px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+			-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+			box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+			margin: 20px auto;
+			width: 80%;height:70px;
+			text-align: center;			
+		}
+	</style>
+</head>
+<body>
+<form method="post" action="./Register.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM4ODE3OTI4N2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFB215YWdyZWVKKbAQ2zdpoLKM8kPM3WLltdeSBZCpepwTJ3hxOJEn/g==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A51E5004" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA4lMYNAQnSUgF2+eBOGTM8HZHsObPXiV0aybeciL4Qfsb1GD5vvr6jRuyfdoVhAZmj7MxA0fnXfSSs7NlHSrhBNLj4nCzyXYbit6vJY1xnZuOK6MiE9z+SHX1SS87bM7cemszc77EDydyN9wIFTgkKJpdAojWK/HUvkj2FjJjTn6T1CjHfB5ze4Qe4HNdogkXSx61un3/4Ty9fuYzeuVCN3SIpRGxCOcLdkS1Vo4DVjH5IArIfAyUQW5yRrTkzEg2cwZygTBdi3AoIoKSgHOnWtou3PHfkjwZ72I3btRmIQ5CocfukyW5Cfbapvjd8K51TpN8SuCMbTMOdun24MC1vA" />
+</div>
+	<div class="img"><img src="images/01.jpg" alt="" /></div>
+	<div class="img" id="btnApply" style="z-index:100;position:absolute;top:288px;width:100%;">
+		
+    </div>
+	
+ <a name="applyForm"></a>
+  <div class="weui_cells weui_cells_form" style="margin: 0px 10%;">
+			
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">手机号码</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input name="signphone" type="text" id="signphone" class="weui_input" placeholder="请输入手机号码" maxlength="11" />
+				</div>
+				<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+			</div>
+            
+            	<div class="weui_cell" style="float:left;width:40%">
+				
+				<div class="weui_cell_bd weui_cell_primary">
+					<input name="signage" type="text" id="signage" class="weui_input" placeholder="请输入验证码" maxlength="5" style="text-align:center;" />
+				</div>
+				<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+			</div>
+<div class="weui_cell" style="float:right;width:35%">
+				<div class="weui_cell_bd weui_cell_primary">
+					<button type="button" class="weui_input">获取验证码</button>
+</div>
+				<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+			</div>
+            <div style="clear:both;"></div>
+            	<div class="weui_cell select">
+				<div class="weui_cell_hd"><label class="weui_label">性别</label></div>
+				<div class="weui-row">
+					<div class="weui-col-50 single_item" data-val="男">男</div>
+					<div class="weui-col-50 single_item" data-val="女">女</div>
+					<input type="hidden" name="signsex"/>
+				</div>
+			</div>
+			
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">生日</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input name="signage" type="text" id="signage" class="weui_input" placeholder="请输入生日" maxlength="10" />
+				</div>
+				<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">推荐人</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input name="signnative" type="text" id="signnative" class="weui_input" placeholder="请输入推荐人" maxlength="20" />
+				</div>
+			</div>
+		
+		
+			
+			
+
+	</div>
+<div class="ware-details">    
+    <div class="mui-input-row mui-checkbox mui-left">
+        <label>
+            <input name="myagree" type="checkbox" id="myagree" value="agree" />
+            <a href="/ManagerStaff/RegisterProtocol.aspx" style="color:#FF7612;">阅读并同意《法律声明及隐私权政策》</a>
+        </label>
+    </div>
+</div>	
+	<div class="img"><input name="btnSign" type="submit" id="btnSign" value="点击升级超级会员" class="baoming" /></div>
+	
+	<div class="shareGuide" style="display:none"></div>
+</form>
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnApply").css("top", $(window).width() * 0.86);
+
+        $("body").children().on("click", ".single_item", function () {
+            var $this = $(this);
+            $this.siblings(".single_item").removeClass("on");
+            $this.addClass("on");
+            $this.siblings("input").val($this.data("val"));
+        })
+
+        $("body").children().on("click", ".multipart_item", function () {
+            var $this = $(this);
+            $this.toggleClass("on");
+            var speciality = "";
+            $this.parent().find(".multipart_item.on").each(function () {
+                speciality += $(this).html() + "|";
+            });
+            speciality = speciality.substring(0, speciality.lastIndexOf("|"));
+            $this.siblings("input").val(speciality);
+        })
+    })
+</script>
+
+</html>
